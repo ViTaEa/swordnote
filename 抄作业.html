@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WEB</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #9ea49a;
+      }
+      .flex {display: flex;}
+      .flex1 {flex: 1;}
+      .column {flex-direction: column;}
+      .shadow {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .color1 {background-color: #b5c5c4;}
+      .color2 {background-color: #8a988e;}
+      .mg8 {margin: 8px;}
+      .mgr8 {margin-right: 8px;}
+      .mgt8 {margin-top: 8px;}
+      .data {height: 100px;}
+      .list {height: 160px;}
+      .navigation {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        font-size: 14px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        line-height:40px
+      }
+      .neiRong::-webkit-scrollbar {display: none;}
+      @media (max-width: 600px) {
+        .ceBian {display: none;}
+        .neiRong {flex-direction: column;}
+        .dataQu {flex-direction: column;}
+        .right {margin-left: 8px;}
+        .data {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 3" class="ceBian flex column color1 shadow">
+      <!-- 侧边头像栏 -->
+      <div style="
+          padding: 30px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid rgb(0, 0, 0);
+        " class="flex color2">
+        <img alt="logo" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww1.sinaimg.cn%2Fmw690%2F9ce51af4gy1h3w1pshmj4j21kw1kwnpd.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660462410&t=c4edab6262913fdc1679817f261b2584" width="40px" height="40px">
+        <div style="margin-left:30px"><B>薯角</B></div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div style="height: 40px;" class="navigation"><B>导航1</B></div>
+        <div style="height: 40px;" class="navigation"><B>导航2</B></div>
+        <div style="height: 40px;" class="navigation"><B>导航3</B></div>
+        <div style="height: 40px;" class="navigation"><B>导航4</B></div>
+        <div style="height: 40px;" class="navigation"><B>导航5</B></div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 2" class="color1 shadow"></div>
+      <!-- 内容区 -->
+      <div class="flex flex1 neiRong" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex dataQu">
+            <!-- 小数据区*4 -->
+            <div class="data color1 shadow flex1 mgr8"></div>
+            <div class="data color1 shadow flex1 mgr8"></div>
+            <div class="data color1 shadow flex1 mgr8"></div>
+            <div class="data color1 shadow flex1"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div class="list mgt8 color1 shadow"></div>
+            <div class="list mgt8 color1 shadow"></div>
+            <div class="list mgt8 color1 shadow"></div>
+            <div class="list mgt8 color1 shadow"></div>
+            <div class="list mgt8 color1 shadow"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="right flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="color1 shadow"></div>
+          <!-- 消息区1 -->
+          <div style="height: 300px" class="mgt8 color1 shadow"></div>
+          <!-- 消息区2 -->
+          <div style="height: 300px" class="mgt8 color1 shadow"></div>
+          <!-- 消息区2 -->
+          <div style="height: 300px" class="mgt8 color1 shadow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
